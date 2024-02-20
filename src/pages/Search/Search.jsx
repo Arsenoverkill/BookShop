@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import { UseMainContext } from "../../Context/Context";
 
 const Search = ({ values }) => {
-  const {date,readProduct} = UseMainContext()
+  const { date, readProduct } = UseMainContext();
 
   let newArr = date.filter((el) => {
-    return el.name.toLowerCase() == values.toLowerCase();
+    return el.name == values;
   });
   useEffect(() => {
-    readProduct()
-  }, [newArr]);
+    readProduct();
+  }, []);
   return (
     <div className="container">
       {newArr.map((el) => {
