@@ -1,0 +1,79 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+.checkbox1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.books-block img {
+  /* width: 200px; */
+  border-radius: 10px;
+  height: 300px;
+}
+#books {
+  display: flex;
+}
+.hero p {
+  margin: 10px 0;
+}
+.books-blocks {
+  margin-top: -23pc;
+  margin-left: 20pc;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 70px;
+}
+.books-block {
+  width: 200px;
+  margin-bottom: 30px;
+}
+.books-block h4 {
+  font-weight: 200;
+  margin-top: 6px;
+}
+.filters {
+  margin-top: 20px;
+}
+.filter-btn {
+  display: flex;
+}
+.filter-btn button {
+  padding: 10px 30px;
+  color: rgba(67, 139, 234, 0.656);
+  border: solid 2px rgba(67, 139, 234, 0.656);
+  border-radius: 8px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.filt {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+.filt p {
+  font-size: 15px;
+  margin-top: 7px;
+  color: rgb(85, 149, 227);
+  border-bottom: solid 2px rgb(85, 149, 227);
+}
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.booksreb {
+  display: flex;
+  gap: 3pc;
+}
+.section1 {
+  margin-top: 20px;
+}
+.section1 input {
+  margin: 10px 0;
+}

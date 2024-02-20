@@ -1,0 +1,39 @@
+.order_block {
+  display: flex;
+  gap: 150px;
+  margin: 100px 0;
+}
+.order_block h3 {
+  margin-top: 25px;
+}
+.order_block img {
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.order_delete {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+.order_delete p {
+  color: rgb(220, 21, 21);
+  cursor: pointer;
+  border-bottom: 2px solid rgb(231, 5, 5);
+}
+.order_delete h1 {
+  font-size: 40px;
+}
+.order_price {
+  margin-top: 140px;
+}
+.order_price h4 {
+  font-size: 20px;
+  color: rgb(109, 3, 151);
+  font-weight: 500;
+}
+.order_price p {
+  color: rgb(3, 3, 151);
+  margin-top: 10px;
+}

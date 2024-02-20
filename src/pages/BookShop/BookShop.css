@@ -1,0 +1,128 @@
+.hero-fon {
+  background: url(https://s3-alpha-sig.figma.com/img/8349/5572/98f1103d0d2b49aa6f5a81e024091169?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mFVzQ7xmFVQQPz~MQvQlYTf4lmC887hedQQDXeoJ1TQk1BtJ4xm1Xr3~TxKvyqtLeLDXJHOeoNS9yjbzS3PbVh1dcPR~ww8SurO3Uq8bwiGbh8FvTFAhYUT3K18mE8c3xdMyTDh7lc-u4rDvZ5jADnYPJs6TJbIEnd1drtY-M6Pkyi84MVPRJUJUASL1hdQ26cm9fDo2hWwbitChNsWUMJMst-BVPhFJsPaQDRb1Qo4IKfRmDpcGG~-XEk-8wrHUWkArtcLK-KrmB51hfmgRfiu7SjJWLlH4qFVcDYbi0dVwQiFNLjYsFoMmU-iIKFh83UE7tZP4L6cK4o1l2DWcwg__)
+    no-repeat center/cover;
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+.hero-fon h1 {
+  color: aliceblue;
+  font-size: 48px;
+  font-weight: 700;
+  font-family: sans-serif;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+}
+.hero-fon p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  font-family: sans-serif;
+  position: absolute;
+  top: 53%;
+  left: 35%;
+}
+#Genres {
+  margin: 130px 0;
+}
+.glav {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.glav a {
+  color: rgb(0, 136, 255);
+}
+.genre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+.genre-block {
+  height: 160px;
+  width: 137px;
+  background: #c7c5c58c;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.genre-block p {
+  margin-top: 20px;
+  text-align: center;
+}
+.genre-block img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+#New-Books {
+  margin: 100px 0;
+}
+.New-Books h1 {
+  text-align: center;
+  font-size: 40px;
+}
+.books-swiper {
+  margin-top: 50px;
+  width: 750px;
+  height: 400px;
+  display: flex;
+  margin-left: 27%;
+  gap: 50px;
+}
+.popular-2 {
+  margin-top: 50px;
+}
+.books-swiper img {
+  height: 300px;
+  width: 200px;
+  border-radius: 10px;
+}
+.scroll-books img {
+  height: 300px;
+  width: 200px;
+  border-radius: 10px;
+}
+.scroll-books {
+  width: 100%;
+  gap: 50px;
+  display: flex;
+  overflow: auto;
+  height: 310px;
+}
+#books-2 h1 {
+  margin: 50px 0;
+}
+.glav-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.glav-2 a {
+  margin-right: 30px;
+  color: rgb(0, 136, 255);
+}
+#About-Us {
+  margin: 100px 0;
+}
+#About-Us h1 {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 400;
+  margin: 50px;
+}
+.about-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.about-block p {
+  line-height: 24px;
+}
