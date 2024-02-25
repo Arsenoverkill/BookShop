@@ -8,9 +8,6 @@ export const UseMainContext = () => useContext(mainContext);
 const Context = ({ children }) => {
   const [date, setDate] = useState([]);
 
-  // let admin = JSON.parse(localStorage.getItem("admin")) || [];
-  //   admin.push(lock)
-  //   localStorage.setItem("admin", JSON.stringify(admin));
   async function addData(obj) {
     await axios.post(api, obj);
   }

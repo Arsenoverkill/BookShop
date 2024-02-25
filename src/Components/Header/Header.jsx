@@ -7,7 +7,6 @@ import "./Header.scss";
 const Header = ({ setValue }) => {
   const navigate = useNavigate();
   const [Admin, setAdmin] = useState([]);
-  console.log(Admin);
 
   function addAdmin() {
     let admin = JSON.parse(localStorage.getItem("admin")) || [];
@@ -112,7 +111,11 @@ const Header = ({ setValue }) => {
             />
             <RiAdminFill
               onClick={() => {
-                Admin == true ? navigate("/admin") : navigate("/password");
+                Admin.map((el) => {
+                  return el == true
+                    ? navigate("/admin")
+                    : navigate("/password");
+                });
               }}
               className="basket-input"
             />
