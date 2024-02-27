@@ -9,8 +9,9 @@ const Admin = () => {
   const [price, setPrice] = useState("");
   const [surName, setAuthor] = useState("");
   const [plot, setPlot] = useState("");
+  const [category, setCategory] = useState("");
   const [count, setCount] = useState(1);
-  const { addData } = UseMainContext();
+  const { addData, date } = UseMainContext();
   const navigate = useNavigate();
 
   function setData() {
@@ -21,17 +22,19 @@ const Admin = () => {
       surName,
       plot,
       count,
+      category,
     };
     if (
       name !== "" &&
       price !== "" &&
       image !== "" &&
       surName !== "" &&
-      plot !== ""
+      plot !== "" &&
+      category !== ""
     ) {
       addData(obj);
     } else {
-      alert("Заполнтье все поле !!!");
+      alert("Заполните все поле !!!");
     }
   }
   return (
@@ -42,9 +45,9 @@ const Admin = () => {
           <button
             onClick={() => {
               let admin = JSON.parse(localStorage.getItem("admin")) || [];
-              admin = admin.map((el)=>{
-                return el = false
-              })
+              admin = admin.map((el) => {
+                return (el = false);
+              });
               localStorage.setItem("admin", JSON.stringify(admin));
               navigate("/password");
             }}
@@ -57,6 +60,10 @@ const Admin = () => {
               Name:
             </label>
             <input
+              style={{
+                boxShadow: name ? "" : "inset 0px .2px 3px red",
+                transition: "1s",
+              }}
               onChange={(e) => setName(e.target.value)}
               type="text"
               placeholder="Name..."
@@ -69,6 +76,10 @@ const Admin = () => {
               Author:
             </label>
             <input
+              style={{
+                boxShadow: surName ? "" : "inset 0px .2px 3px red",
+                transition: "1s",
+              }}
               onChange={(e) => setAuthor(e.target.value)}
               type="text"
               placeholder="Author..."
@@ -81,6 +92,10 @@ const Admin = () => {
               Price:
             </label>
             <input
+              style={{
+                boxShadow: price ? "" : "inset 0px .2px 3px red",
+                transition: "1s",
+              }}
               onChange={(e) => setPrice(e.target.value)}
               type="number"
               placeholder="Price..."
@@ -93,6 +108,10 @@ const Admin = () => {
               URL:
             </label>
             <input
+              style={{
+                boxShadow: image ? "" : "inset 0px .2px 3px red",
+                transition: "1s",
+              }}
               onChange={(e) => setUrl(e.target.value)}
               type="text"
               placeholder="URL..."
@@ -105,12 +124,34 @@ const Admin = () => {
               Plot:
             </label>
             <input
+              style={{
+                boxShadow: plot ? "" : "inset 0px .2px 3px red",
+                transition: "1s",
+              }}
               onChange={(e) => setPlot(e.target.value)}
               type="text"
               placeholder="Plot..."
               name="input"
               class="input"
             />
+          </div>
+          <div className="radio">
+            <label className="label" onClick={() => setCategory("psychology")}>
+              <input type="radio" name="category" />
+              Psychology
+            </label>
+            <label className="label" onClick={() => setCategory("motivatio")}>
+              <input type="radio" name="category" />
+              Motivation
+            </label>
+            <label className="label" onClick={() => setCategory("fantastic")}>
+              <input type="radio" name="category" />
+              Fantastic
+            </label>
+            <label className="label" onClick={() => setCategory("science")}>
+              <input type="radio" name="category" />
+              Science
+            </label>
           </div>
           <button className="button" onClick={() => setData()}>
             <span class="transition"></span>

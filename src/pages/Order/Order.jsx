@@ -16,7 +16,15 @@ const Order = () => {
   useEffect(() => {
     getOrder();
   }, []);
-  return (
+  return order.length == 0 ? (
+    <div className="emty">
+      <p>В корзине пока ничего нету</p>
+      <img
+        src="https://assets-global.website-files.com/646218c67da47160c64a84d5/6463461e80a208f3afa59355_54.png"
+        alt=""
+      />
+    </div>
+  ) : (
     <div className="posts">
       <div className="container">
         <h1>Basket</h1>

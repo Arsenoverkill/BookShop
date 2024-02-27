@@ -7,7 +7,6 @@ export const UseMainContext = () => useContext(mainContext);
 
 const Context = ({ children }) => {
   const [date, setDate] = useState([]);
-
   async function addData(obj) {
     await axios.post(api, obj);
   }

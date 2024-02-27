@@ -105,9 +105,11 @@ const BookShop = () => {
           <div className="scroll-books">
             {date.map((el) => {
               return (
-                <div>
+                <NavLink to={`/books/${el.id}`}>
+                  <div>
                   <img src={el.image} alt="" />
                 </div>
+                </NavLink>
               );
             })}
           </div>
