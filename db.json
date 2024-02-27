@@ -7,7 +7,8 @@
       "id": "1",
       "plot": "Одно слово, столько эмоций. Уделите 1 минуту и прокрутите в голове ситуации, когда именно из-за сомнения вы не решились сделать то, что сделало бы вас счастливее, радостнее. Я думаю, что после этого вам будет мало одной минуты, ведь у каждого было столько моментов, когда это психологическое состояние не позволило сделать то, что хотела бы ваша душа, ваше сердце.",
       "price": 109,
-      "count": 1
+      "count": 1,
+      "category": "motivation"
     },
     {
       "image": "https://marketplace.canva.com/EADyc-p0bWI/1/0/1003w/canva-%D1%81%D0%B8%D0%BD%D0%B8%D0%B9-%D0%B8-%D0%BE%D1%80%D0%B0%D0%BD%D0%B6%D0%B5%D0%B2%D1%8B%D0%B9-%D1%81%D0%BE%D0%B1%D0%B0%D0%BA%D0%B0-%D0%B0%D0%B2%D1%82%D0%BE%D0%B1%D0%B8%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F-%D0%BE%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0-%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8-Glkr3nLbQrs.jpg",
@@ -16,7 +17,8 @@
       "id": "2",
       "plot": "Общение с собакой учит детей ответственности, чуткости и терпению. Вы можете принять участие в программе «Мы — твои друзья», которая направлена на воспитание культуры общения с домашними животными, бережному отношению к ним. Уход за собакой помогает ребёнку обрести уверенность в собственных силах и повысить самооценку.",
       "price": 39,
-      "count": 1
+      "count": 1,
+      "category": "science"
     },
     {
       "image": "https://marketplace.canva.com/EADzXwkR9nI/1/0/1003w/canva-%D0%BF%D0%BE%D0%B4%D0%B1%D0%B0%D0%B4%D1%80%D0%B8%D0%B2%D0%B0%D1%8E%D1%89%D0%B0%D1%8F-%D1%80%D0%BE%D0%BC%D0%B0%D0%BD%D1%82%D0%B8%D0%BA%D0%B0-%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0-%D0%BE%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0-Rho_QtFlu_E.jpg",
@@ -26,7 +28,7 @@
       "plot": "Эту историю любви вы могли уже слышать где угодно. В кафе, в школьном автобусе или может за гаражами, где вас не заметят взрослые.Но есть одно различие: это моя история о любви. С запахом старого дерева гитары, с цветом ярко рыжих волос и со звуками тихой песни, которая льется из музыкального кабинета, залитого вечернем солнцем...",
       "price": 49,
       "count": 1,
-      "popular": "https://marketplace.canva.com/EADzXwkR9nI/1/0/1003w/canva-%D0%BF%D0%BE%D0%B4%D0%B1%D0%B0%D0%B4%D1%80%D0%B8%D0%B2%D0%B0%D1%8E%D1%89%D0%B0%D1%8F-%D1%80%D0%BE%D0%BC%D0%B0%D0%BD%D1%82%D0%B8%D0%BA%D0%B0-%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0-%D0%BE%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0-Rho_QtFlu_E.jpg"
+      "category": "psychology"
     },
     {
       "image": "https://img3.labirint.ru/rc/b451ca2fc0305facf6e198729b867ffd/220x340/books74/730479/cover.jpg?1578727504",
@@ -35,60 +37,150 @@
       "id": "4",
       "plot": "'Не тупи' - это книга-тренинг с упражнениями и техниками для ежедневной работы над собой. С его помощью вы повысите уровень энергии и сохраните осознанность и мотивацию даже в самые трудные времена.'Подробнее': https://www.labirint.ru/books/730479/",
       "price": 99,
-      "count": 1
+      "count": 1,
+      "category": "psychology"
     },
     {
       "image": "https://marketplace.canva.com/EADzX7x5yYU/1/0/1003w/canva-%D0%BC%D1%8F%D1%82%D0%BD%D1%8B%D0%B9-%D0%BA%D0%BE%D1%84%D0%B5-%D1%84%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F-%D0%BC%D0%B8%D0%BD%D0%B8%D0%BC%D0%B0%D0%BB%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%BD%D1%8B%D0%B9-%D0%B5%D0%B4%D0%B0-%D0%B6%D1%83%D1%80%D0%BD%D0%B0%D0%BB-%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0-%D0%BE%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0-4he1eqkeAQg.jpg",
-      "popular": "https://marketplace.canva.com/EADzX7x5yYU/1/0/1003w/canva-%D0%BC%D1%8F%D1%82%D0%BD%D1%8B%D0%B9-%D0%BA%D0%BE%D1%84%D0%B5-%D1%84%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F-%D0%BC%D0%B8%D0%BD%D0%B8%D0%BC%D0%B0%D0%BB%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%BD%D1%8B%D0%B9-%D0%B5%D0%B4%D0%B0-%D0%B6%D1%83%D1%80%D0%BD%D0%B0%D0%BB-%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0-%D0%BE%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0-4he1eqkeAQg.jpg",
       "name": "Кухня",
       "surName": "...",
       "id": "5",
       "plot": "Эта смесь является сильным жиросжигателем. Появилась она в 90-х, но позднее была запрещена во многих странах, так как эфедрин сравнивают с наркотическим веществом. ",
       "price": 39,
-      "count": 1
+      "count": 1,
+      "category": "motivation"
     },
     {
       "image": "https://static-cse.canva.com/blob/585494/.png",
-      "popular": "https://static-cse.canva.com/blob/585494/.png",
       "name": "Слой за слоем",
       "surName": "Джо Максвелл",
       "id": "6",
       "plot": "Действие происходит в Тюмени, в середине 1990-х годов. Влиятельные люди из Москвы хотят сместить губернатора Тюменской области Леонида Рокецкого и поставить на его место депутата Госдумы Лунькова. В центре политической интриги оказываются два друга: журналист Лузгин и банкир Кротов.",
       "price": 79,
-      "count": 1
+      "count": 1,
+      "category": "motivation"
     },
     {
       "image": "https://static-cse.canva.com/blob/585535/28738978elenarezanovanikogdanibudkakvyytiiztupikainaytisebya.jpg_330.jpg",
       "name": "Никогда не Будь",
       "surName": "Елена Резанова",
-      "popular": "https://static-cse.canva.com/blob/585535/28738978elenarezanovanikogdanibudkakvyytiiztupikainaytisebya.jpg_330.jpg",
       "id": "7",
       "plot": "Вдохновляющая книга о том, как решиться на перемены, как набраться смелости, сменить нелюбимую работу, перестать откладывать свою жизнь на потом. Мотивирует и дает план, помогающий решить проблему «хочу, но не знаю, с чего начать».",
       "price": 59,
-      "count": 1
-    },
-    {
-      "email": "arsen_programmer@gmail.com",
-      "password": "Arsen_007",
-      "id": "9108"
-    },
-    {
-      "id": "ef0f",
-      "name": "The Last of us",
-      "image": "https://image.api.playstation.com/vulcan/ap/rnd/202206/0720/ca6Dr3k7PXKaDgEbhN9eODeD.png",
-      "price": "70",
-      "surName": "Nill Drakman",
-      "plot": "The Best Game",
-      "count": 1
+      "count": 1,
+      "category": "motivation"
     },
     {
       "id": "6e64",
       "name": "Rich dad, poor dad",
       "image": "https://media.shortform.com/covers/png/rich-dad-poor-dad-cover@8x.png",
-      "price": "66",
+      "price": 66,
       "surName": "Robert T.",
       "plot": "books for brain",
-      "count": 1
+      "count": 1,
+      "category": "motivation"
+    },
+    {
+      "id": "fba2",
+      "name": "Harry",
+      "image": "https://upload.wikimedia.org/wikipedia/ru/thumb/9/95/Harry_Potter_TV_Series.jpg/266px-Harry_Potter_TV_Series.jpg",
+      "price": 280,
+      "surName": "Jackey R.",
+      "plot": "Harry Potter book is the best ",
+      "count": 1,
+      "email": "arsen_programmer@gmail.com",
+      "password": "Arsen_007",
+      "category": "fantastic"
+    },
+    {
+      "id": "e5e9",
+      "name": "Война и Мир",
+      "image": "https://cdn.7days.ru/pic/7a6/813621/170636/78.jpg",
+      "price": "119",
+      "surName": "Лев Толстой",
+      "plot": "\"Война и Мир\" - роман-эпопея Льва Николаевича Толстого, описывающий русское общество в эпоху войн против Наполеона в 1805—1812 годах. Эпилог романа доводит повествование до 1820 года.",
+      "count": 1,
+      "category": "psychology"
+    },
+    {
+      "id": "b9fb",
+      "name": "Тысячи Сияющих Солнц",
+      "image": "https://bookmix.ru/notes/images/3/0/8/notes_1520154946.jpg",
+      "price": "219",
+      "surName": "Халед Хоссейн",
+      "plot": "Основная линия сюжета — судьба двух афганских девушек, юной красавицы Лейлы и «харами» Мариам. Обе вынуждены выйти замуж, обе переживают ужасы войны и кошмар личного подчинения воле супруга и общества. Накопившаяся за долгое время боль и обида выплескиваются в отчаянную попытку обрести личное счастье.",
+      "count": 1,
+      "category": "psychology"
+    },
+    {
+      "id": "abdd",
+      "name": "Евангелие Богатство",
+      "image": "https://avidreaders.ru/pics/0/5/547305.jpeg",
+      "price": "107",
+      "surName": "Andrew Carnegie",
+      "plot": "Эссе Карнеги \"Евангелие богатства\" - это краткое размышление об условиях жизни общества и распределении богатства. 13. Он был убежденным противником унаследованного богатства. Он считал, что сыновья преуспевающих бизнесменов редко бывают такими же талантливыми, как их отцы.",
+      "count": 1,
+      "category": "motivation"
+    },
+    {
+      "id": "35a7",
+      "name": "Biography Andrew Carnegie",
+      "image": "https://static.yakaboo.ua/media/catalog/product/a/v/avtobiografiya-evangelie-bagatstva-709667.800x800_1.jpeg",
+      "price": "97",
+      "surName": "Andrew Carnegie",
+      "plot": "Э́ндрю Карне́ги - Американский предприниматель, крупный сталепромышленник, мультимиллионер и филантроп.",
+      "count": 1,
+      "category": "motivation"
+    },
+    {
+      "id": "798e",
+      "name": "Тонкое Искусство Пофигизма ",
+      "image": "https://tengrinews.kz/userdata/images/u342/403752bb3d556b5a5ddc8d383580e7fa.jpeg",
+      "price": "135",
+      "surName": "Марк Менсон",
+      "plot": "Жизненная философия блогера Марка Мэнсона проста — необходимо научиться искусству пофигизма. Определив то, что действительно важно, нужно уметь наплевать на все второстепенное, забить на трудности и чужое мнение и быть готовым взглянуть в лицо неудачам.",
+      "count": 1,
+      "category": "psychology"
+    },
+    {
+      "id": "2d7f",
+      "name": "Тело Помнит Все",
+      "image": "https://images.thevoicemag.ru/upload/img_cache/5dc/5dc6ae18f04717de89d98817e01fccbf_cropped_415x597.jpg",
+      "price": "83",
+      "surName": "Бессел ван дер Колк",
+      "plot": "В своей книге доктор Бессел ван дер Колк рассказывает, как помочь себе и своим близким вернуть полноценную жизнь. Сочетая исследования в области травмы и свой опыт, он объясняет, как травма может лишить человека самоконтроля, близких отношений и способности чувствовать радость.",
+      "count": 1,
+      "category": "psychology"
+    },
+    {
+      "id": "c8fb",
+      "name": "The Poppy War",
+      "image": "https://media.npr.org/assets/img/2021/08/16/81laymbisll_custom-6686a26e308c6eda3094f407041d7e0bd6f2bc29-s800-c85.jpeg",
+      "price": "67",
+      "surName": "R. F. Kuang",
+      "plot": " Рин - сирота и торгует зельями и травами в лавке приемных родителей. Единственный шанс сбежать от такой жизни - сдать вступительный экзамен в военную академию Синегарда.",
+      "count": 1,
+      "category": "fantastic"
+    },
+    {
+      "id": "ed9a",
+      "name": "BREATH",
+      "image": "https://images.penguinrandomhouse.com/cover/9780735213616",
+      "price": "85",
+      "surName": "James Nestor",
+      "plot": "Breath ― научно-популярная книга американского журналиста Джеймса Нестора. Книга представляет собой историческое, научное и личное исследование дыхания, а также исследует различия между дыханием через рот и через нос. Нестор написал эту книгу после десяти лет исследования предмета.",
+      "count": 1,
+      "category": "science"
+    },
+    {
+      "id": "ce14",
+      "name": "The Science of The Big Bang Theory",
+      "image": "https://m.media-amazon.com/images/I/81zCzLEf-kL._AC_UF1000,1000_QL80_.jpg",
+      "price": "293",
+      "surName": "Mark Brake",
+      "plot": "Большо́й взрыв — общепринятая космологическая модель, описывающая раннее развитие Вселенной, а именно — начало расширения Вселенной, перед которым Вселенная находилась в сингулярном состоянии. Обычно сейчас сочетают теорию Большого взрыва и модель горячей Вселенной, но эти концепции независимы.",
+      "count": 1,
+      "category": "science"
     }
   ]
 }

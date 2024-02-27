@@ -117,3 +117,10 @@ button:hover .transition {
 button:active {
   transform: scale(0.97);
 }
+.radio {
+  display: flex;
+  flex-direction: column;
+  margin-right: 330px;
+  gap: 20px;
+  margin-top: 20px;
+}

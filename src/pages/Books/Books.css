@@ -7,8 +7,13 @@
   align-items: center;
   gap: 10px;
 }
+.label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
 .books-block img {
-  /* width: 200px; */
   border-radius: 10px;
   height: 300px;
 }
@@ -37,18 +42,18 @@
 .filters {
   margin-top: 20px;
 }
-.filter-btn {
-  display: flex;
-}
-.filter-btn button {
-  padding: 10px 30px;
-  color: rgba(67, 139, 234, 0.656);
+.filter-btn select {
+  padding: 10px 20px;
+  color: rgb(69, 2, 117);
   border: solid 2px rgba(67, 139, 234, 0.656);
   border-radius: 8px;
+  font-weight: 600;
   background: transparent;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  outline: none;
+}
+.filter-btn option {
+  color: rgb(85, 2, 157);
+  margin: 30px 0;
 }
 .filt {
   display: flex;

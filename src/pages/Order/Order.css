@@ -37,3 +37,18 @@
   color: rgb(3, 3, 151);
   margin-top: 10px;
 }
+
+.emty {
+  display: flex;
+  justify-content: center;
+}
+.emty p {
+  font-size: 22px;
+  margin: 200px 0 300px 0;
+}
+.emty img {
+  width: 100px;
+  height: 100px;
+  margin-top: 145px;
+  margin-left: 20px;
+}

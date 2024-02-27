@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./Categories.css";
 import { UseMainContext } from "../../Context/Context";
 
@@ -7,8 +7,8 @@ const Categories = () => {
   const { id } = useParams();
   const [posts, setPosts] = useState([]);
   const navigate = useNavigate();
-  const {date,readProduct} = UseMainContext()
-  
+  const { date, readProduct } = UseMainContext();
+
   function getBooksData() {
     let res = date.filter((el) => {
       return el.id == id;
@@ -30,7 +30,7 @@ const Categories = () => {
     }
   }
   useEffect(() => {
-    readProduct()
+    readProduct();
     getBooksData();
   }, [id]);
   return (
@@ -46,12 +46,15 @@ const Categories = () => {
               <h3>{el.plot}</h3>
               <h4>{el.price * el.count}$</h4>
               <div className="shop_book">
-                  <button onClick={() => {
-                    setOrder()
-                    navigate('/order')
-                  }} class="btn">
-                    Buy now
-                  </button>
+                <button
+                  onClick={() => {
+                    setOrder();
+                    navigate("/order");
+                  }}
+                  class="btn"
+                >
+                  Buy now
+                </button>
                 <div className="quintity">
                   <button
                     onClick={() => {

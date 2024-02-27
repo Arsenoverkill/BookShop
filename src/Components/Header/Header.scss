@@ -25,6 +25,70 @@ header {
       align-items: center;
       gap: 20px;
       font-size: 20px;
+      .basket_quintity {
+        display: flex;
+        position: relative;
+        .count {
+          width: 17px;
+          height: 17px;
+          border-radius: 50%;
+          background: red;
+          position: absolute;
+          padding: 2px 0 0 0;
+          z-index: -1;
+          top: -7px;
+          left: 17px;
+          p {
+            font-size: 13px;
+            text-align: center;
+            color: white;
+          }
+        }
+      }
+      .options {
+        width: 350px;
+        border-radius: 10px;
+        background: rgb(226, 233, 229);
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        .books {
+          .book {
+            display: flex;
+            img {
+              width: 100px;
+              border-radius: 10px;
+              height: 130px;
+              margin: 0 20px 0 0;
+            }
+            .text {
+              h4 {
+                margin-top: 10px;
+                font-size: 17px;
+              }
+              h6 {
+                font-size: 13px;
+                font-weight: 600;
+                margin-top: 8px;
+              }
+              p {
+                font-size: 12px;
+                font-weight: 600;
+                margin-top: 12px;
+              }
+            }
+          }
+          hr {
+            margin: 10px 0;
+            background: rgb(173, 54, 252);
+            height: 1px;
+            border: none;
+            box-shadow: 0 0 3px 0.8px rgb(92, 199, 249);
+          }
+        }
+      }
     }
   }
   .basket-input {
@@ -41,7 +105,7 @@ header {
 }
 
 .search input[type="text"] {
-  width: 200px;
+  width: 350px;
   padding: 10px;
   border: none;
   border-radius: 20px;

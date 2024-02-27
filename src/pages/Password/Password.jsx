@@ -37,7 +37,7 @@ const Password = () => {
       getTime();
     }, 500);
   });
-  const { date, readProduct } = UseMainContext();
+  const { date,readProduct, sign } = UseMainContext();
 
   useEffect(() => {
     readProduct();
@@ -46,7 +46,6 @@ const Password = () => {
   function audio() {
     new Audio(click).play();
   }
-
   function openAdmin() {
     date.map((el) => {
       if (el.password == code && el.email == email) {
@@ -67,7 +66,7 @@ const Password = () => {
         setTimeout(() => {
           setError(false);
         }, 1600);
-        audio();
+        // audio();
         setAttemts(attempts + 1);
       }
     });

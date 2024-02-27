@@ -1,20 +1,36 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { BsBasket2Fill } from "react-icons/bs";
+import { SlBasket } from "react-icons/sl";
 import { RiAdminFill } from "react-icons/ri";
+import { FaLockOpen } from "react-icons/fa6";
 import "./Header.scss";
+import { UseMainContext } from "../../Context/Context";
 
-const Header = ({ setValue }) => {
+const Header = () => {
   const navigate = useNavigate();
   const [Admin, setAdmin] = useState([]);
+  const [order, setOrder] = useState([]);
+  const [value, setValue] = useState("");
+
+  const { date, readProduct } = UseMainContext();
+
+  let newArr = date.filter((el) =>
+    el.name.toLowerCase().includes(value.toLowerCase())
+  );
 
   function addAdmin() {
     let admin = JSON.parse(localStorage.getItem("admin")) || [];
     setAdmin(admin);
   }
+  function getOrder() {
+    let order2 = JSON.parse(localStorage.getItem("order")) || [];
+    setOrder(order2);
+  }
   useEffect(() => {
     addAdmin();
-  }, []);
+    readProduct();
+    getOrder();
+  }, [Admin, order]);
   function BooksUp() {
     window.scroll({
       top: 1650,
@@ -94,31 +110,88 @@ const Header = ({ setValue }) => {
                 placeholder="Search..."
                 type="text"
               />
-              <button
-                onClick={() => {
-                  navigate("/search");
+              <button type="submit">Search</button>
+              <div
+                style={{
+                  display: value ? "flex" : "none",
+                  overflowY: newArr.length > 3 ? "scroll" : "none",
+                  height: newArr.length > 0 ? "320px" : "0",
+                  transition: ".7s",
                 }}
-                type="submit"
+                className="options"
               >
-                Search
-              </button>
+                {newArr.map((el) => (
+                  <NavLink to={`/books/${el.id}`}>
+                    <div className="books">
+                      <div className="book">
+                        <img src={el.image} alt="" />
+                        <div className="text">
+                          <h4>{el.name}</h4>
+                          <h6>{el.surName}</h6>
+                          <p>
+                            {el.plot.length > 120
+                              ? el.plot.slice(0, 120).concat("...")
+                              : el.plot}
+                          </p>
+                        </div>
+                      </div>
+                      <hr />
+                    </div>
+                  </NavLink>
+                ))}
+              </div>
             </div>
-            <BsBasket2Fill
-              onClick={() => {
-                navigate("/order");
-              }}
-              className="basket-input"
-            />
-            <RiAdminFill
-              onClick={() => {
-                Admin.map((el) => {
-                  return el == true
-                    ? navigate("/admin")
-                    : navigate("/password");
-                });
-              }}
-              className="basket-input"
-            />
+            <div className="basket_quintity">
+              <SlBasket
+                style={{
+                  fontSize: "25px",
+                }}
+                onClick={() => {
+                  navigate("/order");
+                }}
+                className="basket-input"
+              />
+
+              <div
+                style={{
+                  display: order.length == 0 ? "none" : "block",
+                }}
+                className="count"
+              >
+                <p>{order.length}</p>
+              </div>
+            </div>
+            {Admin.map((il) => {
+              return il ? (
+                <FaLockOpen
+                  style={{
+                    fontSize: "25px",
+                  }}
+                  onClick={() => {
+                    Admin.map((el) => {
+                      return el == true
+                        ? navigate("/admin")
+                        : navigate("/password");
+                    });
+                  }}
+                  className="basket-input"
+                />
+              ) : (
+                <RiAdminFill
+                  style={{
+                    fontSize: "25px",
+                  }}
+                  onClick={() => {
+                    Admin.map((el) => {
+                      return el == true
+                        ? navigate("/admin")
+                        : navigate("/password");
+                    });
+                  }}
+                  className="basket-input"
+                />
+              );
+            })}
           </div>
         </div>
       </div>
