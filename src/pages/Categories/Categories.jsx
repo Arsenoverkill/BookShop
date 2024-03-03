@@ -40,7 +40,7 @@ const Categories = () => {
   useEffect(() => {
     readProduct();
     getBooksData();
-  }, [id,posts]);
+  }, [id]);
   return (
     <div className="posts">
       <div className="container">
@@ -61,23 +61,23 @@ const Categories = () => {
                   }}
                   class="btn"
                 >
-                  Buy now
+                  Add Basket
                 </button>
                 <div className="quintity">
-                  <button onClick={() => {
-                    if (el.count > 1) {
-                      el.count -= 1;
-                    }
-                  }} class="pushable">
+                  <button
+                    onClick={() => {
+                      if (el.count > 1) {
+                        el.count -= 1;
+                      }
+                    }}
+                    class="pushable"
+                  >
                     <span class="shadow"></span>
                     <span class="edge"></span>
                     <span class="front"> - </span>
                   </button>
                   <p>{el.count}</p>
-                  <button
-                    onClick={() => el.count += 1}
-                    class="pushable"
-                  >
+                  <button onClick={() => (el.count += 1)} class="pushable">
                     <span class="shadow"></span>
                     <span class="edge"></span>
                     <span class="front"> + </span>
