@@ -14,8 +14,16 @@ const Context = ({ children }) => {
     let res = await axios(api);
     setDate(res.data);
   }
+  async function deletData(id){
+    await axios.delete(`${api}/${id}`)
+  }
+  async function editData(id,newEditObj){
+    await axios.patch(`${api}/${id}` , newEditObj)
+  }
   const values = {
+    deletData,
     addData,
+    editData,
     readProduct,
     date,
   };

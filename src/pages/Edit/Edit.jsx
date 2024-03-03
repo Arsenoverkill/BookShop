@@ -1,27 +1,40 @@
-import React, { useState } from "react";
-import "./Admin.css";
+import React, { useEffect, useState } from "react";
 import { UseMainContext } from "../../Context/Context";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
-const Admin = () => {
+const Edit = () => {
   const [name, setName] = useState("");
   const [image, setUrl] = useState("");
   const [price, setPrice] = useState("");
   const [surName, setAuthor] = useState("");
   const [plot, setPlot] = useState("");
   const [category, setCategory] = useState("");
-  const [count, setCount] = useState(1);
-  const { addData, date } = UseMainContext();
+  const { editData, date } = UseMainContext();
   const navigate = useNavigate();
 
-  function setData() {
-    let obj = {
+  const { id } = useParams();
+
+  function saveEditData() {
+    let newArr = date.filter((el) => {
+      return el.id == id;
+    });
+    newArr.map((el) => {
+      setName(el.name);
+      setUrl(el.image);
+      setPrice(el.price);
+      setAuthor(el.surName);
+      setPlot(el.plot);
+      setCategory(el.category);
+    });
+  }
+
+  function saveData() {
+    let newEditObj = {
       name,
       image,
       price,
       surName,
       plot,
-      count,
       category,
     };
     if (
@@ -32,29 +45,20 @@ const Admin = () => {
       plot !== "" &&
       category !== ""
     ) {
-      addData(obj);
+      editData(id ,newEditObj);
     } else {
       alert("Заполните все поле !!!");
     }
   }
+
+  useEffect(() => {
+    saveEditData();
+  }, []);
   return (
     <div id="admin">
       <div className="container">
         <div className="admin">
           <h1>Admin</h1>
-          <button
-            onClick={() => {
-              let admin = JSON.parse(localStorage.getItem("admin")) || [];
-              admin = admin.map((el) => {
-                return (el = false);
-              });
-              localStorage.setItem("admin", JSON.stringify(admin));
-              navigate("/password");
-            }}
-            className="leave"
-          >
-            Выйти С Возможнестей <br /> Админа
-          </button>
           <div class="coolinput">
             <label for="input" class="text">
               Name:
@@ -69,6 +73,7 @@ const Admin = () => {
               placeholder="Name..."
               name="input"
               class="input"
+              value={name}
             />
           </div>
           <div class="coolinput">
@@ -85,6 +90,7 @@ const Admin = () => {
               placeholder="Author..."
               name="input"
               class="input"
+              value={surName}
             />
           </div>
           <div class="coolinput">
@@ -101,6 +107,7 @@ const Admin = () => {
               placeholder="Price..."
               name="input"
               class="input"
+              value={price}
             />
           </div>
           <div class="coolinput">
@@ -116,6 +123,7 @@ const Admin = () => {
               type="text"
               placeholder="URL..."
               name="input"
+              value={image}
               class="input"
             />
           </div>
@@ -132,22 +140,27 @@ const Admin = () => {
               type="text"
               placeholder="Plot..."
               name="input"
+              value={plot}
               class="input"
             />
           </div>
           <select
             className="select-box"
             onChange={(e) => setCategory(e.target.value)}
+            value={category}
           >
             <option value="psychology">Psychology</option>
             <option value="motivation">Motivation</option>
             <option value="fantastic">Fantastic</option>
             <option value="science">Science</option>
           </select>
-          <button className="button" onClick={() => setData()}>
+          <button className="button" onClick={() => {
+            saveData()
+            navigate('/books')
+          }}>
             <span class="transition"></span>
             <span class="gradient"></span>
-            <span class="label">CREATE</span>
+            <span class="label">SAVE</span>
           </button>
         </div>
       </div>
@@ -155,4 +168,4 @@ const Admin = () => {
   );
 };
 
-export default Admin;
+export default Edit;

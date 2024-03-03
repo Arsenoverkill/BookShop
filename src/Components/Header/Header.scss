@@ -54,6 +54,7 @@ header {
         display: flex;
         flex-direction: column;
         padding: 10px;
+        transition: .6s;
         .books {
           .book {
             display: flex;
@@ -96,6 +97,23 @@ header {
   }
   a {
     cursor: pointer;
+  }
+}
+.first {
+  animation: first_text 0.5s;
+}
+.second {
+  animation: first_text 1s;
+}
+.three {
+  animation: first_text 1.5s;
+}
+.four {
+  animation: first_text 2s;
+}
+@keyframes first_text {
+  0% {
+    transform: translateY(-180px);
   }
 }
 

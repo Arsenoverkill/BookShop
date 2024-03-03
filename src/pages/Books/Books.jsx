@@ -3,23 +3,34 @@ import "./Books.css";
 import { IoIosArrowDown } from "react-icons/io";
 import { NavLink } from "react-router-dom";
 import { UseMainContext } from "../../Context/Context";
+import { MdDelete } from "react-icons/md";
+import { MdEdit } from "react-icons/md";
 
 const Books = () => {
-  const { date, readProduct } = UseMainContext();
+  const { date, readProduct, deletData } = UseMainContext();
 
   const [category, setCategory] = useState("All");
   const [data, setData] = useState([]);
+  const [Admin, setAdmin] = useState(false);
+
   function setProductData() {
     let res = date.filter((el) => {
       return el.category == category;
     });
     setData(res);
   }
+  function addAdmin() {
+    let admin = JSON.parse(localStorage.getItem("admin")) || [];
+    admin.map((el) => {
+      return setAdmin(el);
+    });
+  }
 
   useEffect(() => {
     readProduct();
     setProductData();
-  }, [data]);
+    addAdmin();
+  }, [data, Admin]);
   return (
     <div id="books">
       <div className="container">
@@ -67,58 +78,67 @@ const Books = () => {
               </label>
             </div>
             <div className="checkbox1">
-              <label  className="label" onClick={() => setCategory("motivation")}>
+              <label
+                className="label"
+                onClick={() => setCategory("motivation")}
+              >
                 <input type="radio" name="category" />
                 Motivation
               </label>
             </div>
             <div className="checkbox1">
-              <label  className="label"onClick={() => setCategory("fantastic")}>
+              <label className="label" onClick={() => setCategory("fantastic")}>
                 <input type="radio" name="category" />
                 Fantastic
               </label>
             </div>
             <div className="checkbox1">
-              <label  className="label"onClick={() => setCategory("science")}>
+              <label className="label" onClick={() => setCategory("science")}>
                 <input type="radio" name="category" />
                 Science
               </label>
             </div>
             <div className="checkbox1">
-              <input type="radio" name="category" />
-              <p>For teenagers</p>
+              <label className="label">
+                <input type="radio" name="category" />
+                For teenagers
+              </label>
             </div>
             <div className="checkbox1">
-              <input type="radio" name="category" />
-              <p>Finance</p>
+              <label className="label">
+                <input type="radio" name="category" />
+                Finance
+              </label>
             </div>
             <div className="checkbox1">
-              <input type="radio" name="category" />
-              <p>Detective</p>
+              <label className="label">
+                <input type="radio" name="category" />
+                Detective
+              </label>
             </div>
             <div className="checkbox1">
-              <input type="radio" name="category" />
-              <p>Romantic</p>
+              <label className="label">
+                <input type="radio" name="category" />
+                Romantic
+              </label>
             </div>
             <div className="checkbox1">
-              <input type="radio" name="category" />
-              <p>Psychology</p>
+              <label className="label">
+                <input type="radio" name="category" />
+                Educotional
+              </label>
             </div>
             <div className="checkbox1">
-              <input type="radio" name="category" />
-              <p>Self-improvement</p>
+              <label className="label">
+                <input type="radio" name="category" />
+                Religion
+              </label>
             </div>
             <div className="checkbox1">
-              <input type="radio" name="category" />
-              <p>Educotional</p>
-            </div>
-            <div className="checkbox1">
-              <input type="radio" name="category" />
-              <p>Literature</p>
-            </div>
-            <div className="checkbox1">
-              <input type="radio" name="category" />
-              <p>Religion</p>
+              <label className="label">
+                <input type="radio" name="category" />
+                Literature
+              </label>
             </div>
           </div>
         </div>
@@ -126,22 +146,68 @@ const Books = () => {
         <div className="books-blocks">
           {category == "All"
             ? date.map((el) => (
-                <NavLink to={`/books/${el.id}`}>
-                  <div className="books-block">
-                    <img src={el.image} alt="" />
-                    <h3>{el.name}</h3>
-                    <p>{el.surName}</p>
+                <div
+                  style={{
+                    marginBottom: "30px",
+                  }}
+                >
+                  <NavLink to={`/books/${el.id}`}>
+                    <div className="books-block">
+                      <img src={el.image} alt="" />
+                      <h3>
+                        {el.name.length >= 15
+                          ? el.name.slice(0, 15).concat("...")
+                          : el.name}
+                      </h3>
+                      <p>{el.surName}</p>
+                    </div>
+                  </NavLink>
+                  <div
+                    style={{
+                      display: Admin ? "flex" : "none",
+                    }}
+                    className="btns"
+                  >
+                    <button onClick={() => deletData(el.id)} className="delete">
+                      <MdDelete />
+                    </button>
+                    <NavLink to={`/books/edit/${el.id}`}>
+                      <button className="edit">
+                        <MdEdit />
+                      </button>
+                    </NavLink>
                   </div>
-                </NavLink>
+                </div>
               ))
             : data.map((el) => (
-                <NavLink to={`/books/${el.id}`}>
-                  <div className="books-block">
-                    <img src={el.image} alt="" />
-                    <h3>{el.name}</h3>
-                    <p>{el.surName}</p>
+                <div>
+                  <NavLink to={`/books/${el.id}`}>
+                    <div className="books-block">
+                      <img src={el.image} alt="" />
+                      <h3>
+                        {el.name.length >= 15
+                          ? el.name.slice(0, 15).concat("...")
+                          : el.name}
+                      </h3>
+                      <p>{el.surName}</p>
+                    </div>
+                  </NavLink>
+                  <div
+                    style={{
+                      display: Admin ? "flex" : "none",
+                    }}
+                    className="btns"
+                  >
+                    <button onClick={() => deletData(el.id)} className="delete">
+                      <MdDelete />
+                    </button>
+                    <NavLink to={`/books/edit/${el.id}`}>
+                      <button className="edit">
+                        <MdEdit />
+                      </button>
+                    </NavLink>
                   </div>
-                </NavLink>
+                </div>
               ))}
         </div>
       </div>

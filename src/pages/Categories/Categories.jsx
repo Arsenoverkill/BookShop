@@ -8,7 +8,6 @@ const Categories = () => {
   const [posts, setPosts] = useState([]);
   const navigate = useNavigate();
   const { date, readProduct } = UseMainContext();
-
   function getBooksData() {
     let res = date.filter((el) => {
       return el.id == id;
@@ -27,12 +26,21 @@ const Categories = () => {
       order.push(posts[0]);
       localStorage.setItem("order", JSON.stringify(order));
       navigate("/order");
+    } else {
+      order.map((el) => {
+        posts.map((il) => {
+          if (il.id == el.id) {
+            return (el.count += il.count);
+          }
+        });
+      });
+      localStorage.setItem("order", JSON.stringify(order));
     }
   }
   useEffect(() => {
     readProduct();
     getBooksData();
-  }, [id]);
+  }, [id,posts]);
   return (
     <div className="posts">
       <div className="container">
@@ -56,30 +64,23 @@ const Categories = () => {
                   Buy now
                 </button>
                 <div className="quintity">
+                  <button onClick={() => {
+                    if (el.count > 1) {
+                      el.count -= 1;
+                    }
+                  }} class="pushable">
+                    <span class="shadow"></span>
+                    <span class="edge"></span>
+                    <span class="front"> - </span>
+                  </button>
+                  <p>{el.count}</p>
                   <button
-                    onClick={() => {
-                      el.count += 1;
-                      getBooksData();
-                    }}
+                    onClick={() => el.count += 1}
                     class="pushable"
                   >
                     <span class="shadow"></span>
                     <span class="edge"></span>
                     <span class="front"> + </span>
-                  </button>
-                  <p>{el.count}</p>
-                  <button
-                    onClick={() => {
-                      if (el.count > 1) {
-                        el.count -= 1;
-                        getBooksData();
-                      }
-                    }}
-                    class="pushable"
-                  >
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <span class="front"> - </span>
                   </button>
                 </div>
               </div>

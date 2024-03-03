@@ -82,3 +82,26 @@
 .section1 input {
   margin: 10px 0;
 }
+.btns {
+  display: flex;
+  gap: 20px;
+}
+.delete {
+  padding: 6px 8px;
+  background: rgba(228, 39, 39, 0.847);
+  border: 2px solid rgb(212, 4, 4);
+  box-shadow: 0 0 5px 0.5px red;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+.edit {
+  padding: 6px 8px;
+  background: rgba(48, 228, 39, 0.847);
+  border: 2px solid rgb(42, 212, 4);
+  box-shadow: 0 0 5px 0.5px rgb(34, 255, 0);
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+/* Select */

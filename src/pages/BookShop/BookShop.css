@@ -76,9 +76,6 @@
   margin-left: 27%;
   gap: 50px;
 }
-.popular-2 {
-  margin-top: 50px;
-}
 .books-swiper img {
   height: 300px;
   width: 200px;
@@ -126,3 +123,8 @@
 .about-block p {
   line-height: 24px;
 }
+.popular {
+  display: flex;
+  gap: 40px;
+}
+
