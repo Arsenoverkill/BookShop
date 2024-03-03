@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Admin.css";
 import { UseMainContext } from "../../Context/Context";
 import { useNavigate } from "react-router-dom";
-
+import { FaChevronDown } from "react-icons/fa";
 const Admin = () => {
   const [name, setName] = useState("");
   const [image, setUrl] = useState("");
@@ -135,15 +135,34 @@ const Admin = () => {
               class="input"
             />
           </div>
-          <select
-            className="select-box"
-            onChange={(e) => setCategory(e.target.value)}
+          <div
+            style={{
+              position: "relative",
+            }}
           >
-            <option value="psychology">Psychology</option>
-            <option value="motivation">Motivation</option>
-            <option value="fantastic">Fantastic</option>
-            <option value="science">Science</option>
-          </select>
+            <div
+              style={{
+                position: "absolute",
+                left: "7.7pc",
+                top: "22px",
+                color: "white",
+                cursor: "pointer",
+              }}
+            >
+              {" "}
+              <FaChevronDown />
+            </div>
+            <select
+              className="select-box"
+              onChange={(e) => setCategory(e.target.value)}
+              style={{ cursor: "pointer" }}
+            >
+              <option value="psychology">Psychology</option>
+              <option value="motivation">Motivation</option>
+              <option value="fantastic">Fantastic</option>
+              <option value="science">Science</option>
+            </select>
+          </div>
           <button className="button" onClick={() => setData()}>
             <span class="transition"></span>
             <span class="gradient"></span>
