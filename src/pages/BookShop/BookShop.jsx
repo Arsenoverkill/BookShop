@@ -4,11 +4,20 @@ import { NavLink } from "react-router-dom";
 import { UseMainContext } from "../../Context/Context";
 
 const BookShop = () => {
-  const {date,readProduct} = UseMainContext()
+  const { date, readProduct } = UseMainContext();
+  const [newBooks, setNewBooks] = useState([]);
+
+  function newBOoks() {
+    let res = date.filter((el) => {
+      return el.newBook;
+    });
+    setNewBooks(res);
+  }
 
   useEffect(() => {
     readProduct();
-  }, []);
+    newBOoks();
+  }, [newBooks]);
   return (
     <div>
       <section id="hero">
@@ -70,28 +79,18 @@ const BookShop = () => {
         <div className="New-Books">
           <h1>New Books</h1>
           <div className="books-swiper">
-            <div className="popular popular-2">
-              <img
-                src="https://m.media-amazon.com/images/I/71hgr6+CfOL._AC_UF1000,1000_QL80_.jpg"
-                alt=""
-              />
-              <h4>A NEW NAME: SEPTOLOGY </h4>
-            </div>
-            <div className="popular ">
-              <img
-                src="https://images2.penguinrandomhouse.com/cover/9780593492307"
-                alt=""
-              />
-              <h4>
-                The CLIMAT BOOK: <br /> THE FACTS AND THE <br /> SOLOTIONS
-              </h4>
-            </div>
-            <div className="popular popular-2">
-              <img
-                src="https://m.media-amazon.com/images/I/81-rWvLyz2L._AC_UF894,1000_QL80_.jpg"
-                alt=""
-              />
-              <h4>REST IS RESISTANCE : A MANIFESTO</h4>
+            <div className="popular">
+              {newBooks.map((el) => {
+                return (
+                  <NavLink to={`books/${el.id}`}>
+                    <div>
+                      <img src={el.image} alt="" />
+                      <h2>{el.name}</h2>
+                      <h3>{el.surName}</h3>
+                    </div>
+                  </NavLink>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -107,8 +106,8 @@ const BookShop = () => {
               return (
                 <NavLink to={`/books/${el.id}`}>
                   <div>
-                  <img src={el.image} alt="" />
-                </div>
+                    <img src={el.image} alt="" />
+                  </div>
                 </NavLink>
               );
             })}

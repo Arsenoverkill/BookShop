@@ -71,6 +71,7 @@ const Header = () => {
               />
             </NavLink>
             <NavLink
+              className="first"
               onClick={() => {
                 CategoriesUp();
               }}
@@ -79,6 +80,7 @@ const Header = () => {
               Categories
             </NavLink>
             <NavLink
+              className="second"
               onClick={() => {
                 RecentUp();
               }}
@@ -87,6 +89,7 @@ const Header = () => {
               Recent
             </NavLink>
             <NavLink
+              className="three"
               onClick={() => {
                 BooksUp();
               }}
@@ -95,6 +98,7 @@ const Header = () => {
               Books
             </NavLink>
             <NavLink
+              className="four"
               onClick={() => {
                 AboutUsUp();
               }}
@@ -114,9 +118,13 @@ const Header = () => {
               <div
                 style={{
                   display: value ? "flex" : "none",
-                  overflowY: newArr.length > 3 ? "scroll" : "none",
-                  height: newArr.length > 0 ? "320px" : "0",
-                  transition: ".7s",
+                  overflowY: newArr.length > 1 ? "scroll" : "none",
+                  height:
+                    newArr.length > 1
+                      ? "300px"
+                      : newArr.length == 1
+                      ? "150px"
+                      : "0px",
                 }}
                 className="options"
               >
@@ -126,13 +134,12 @@ const Header = () => {
                       <div className="book">
                         <img src={el.image} alt="" />
                         <div className="text">
-                          <h4>{el.name}</h4>
+                          <h4>
+                            {el.name.length > 20
+                              ? el.name.slice(0, 20).concat("...")
+                              : el.name}
+                          </h4>
                           <h6>{el.surName}</h6>
-                          <p>
-                            {el.plot.length > 120
-                              ? el.plot.slice(0, 120).concat("...")
-                              : el.plot}
-                          </p>
                         </div>
                       </div>
                       <hr />

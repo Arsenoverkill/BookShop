@@ -17,7 +17,14 @@ const Password = () => {
   const [time2, setTime2] = useState(30);
   const [attempts, setAttemts] = useState(0);
   const [one, setOne] = useState(false);
+  const [Admin, setAdmin] = useState("");
 
+  function Adm() {
+    let adm = JSON.parse(localStorage.getItem("admin")) || [];
+    adm.map((el) => {
+      setAdmin(el);
+    });
+  }
   function getTime() {
     if (attempts == 3) {
       setOne(true);
@@ -37,11 +44,12 @@ const Password = () => {
       getTime();
     }, 500);
   });
-  const { date,readProduct, sign } = UseMainContext();
+  const { date, readProduct } = UseMainContext();
 
   useEffect(() => {
     readProduct();
-  }, []);
+    Adm();
+  }, [Admin]);
 
   function audio() {
     new Audio(click).play();
@@ -66,8 +74,8 @@ const Password = () => {
         setTimeout(() => {
           setError(false);
         }, 1600);
-        // audio();
         setAttemts(attempts + 1);
+        
       }
     });
   }
