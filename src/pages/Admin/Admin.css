@@ -7,7 +7,9 @@
   align-items: center;
 }
 .select-box {
-  padding: 10px 30px;
+  padding: 10px 33px;
+  background-color: #2873ffc6;
+  box-shadow: 0 0 5px 1.4px rgb(42, 42, 233);
   background-color: #2873ffc6;
   box-shadow: 0 0 5px 1.4px blue;
   color: white;

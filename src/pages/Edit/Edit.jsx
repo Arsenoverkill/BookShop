@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { UseMainContext } from "../../Context/Context";
 import { useNavigate, useParams } from "react-router-dom";
-
+import { FaChevronDown } from "react-icons/fa";
 const Edit = () => {
   const [name, setName] = useState("");
   const [image, setUrl] = useState("");
@@ -45,7 +45,7 @@ const Edit = () => {
       plot !== "" &&
       category !== ""
     ) {
-      editData(id ,newEditObj);
+      editData(id, newEditObj);
     } else {
       alert("Заполните все поле !!!");
     }
@@ -58,7 +58,7 @@ const Edit = () => {
     <div id="admin">
       <div className="container">
         <div className="admin">
-          <h1>Admin</h1>
+          <h1>EDIT</h1>
           <div class="coolinput">
             <label for="input" class="text">
               Name:
@@ -144,20 +144,45 @@ const Edit = () => {
               class="input"
             />
           </div>
-          <select
-            className="select-box"
-            onChange={(e) => setCategory(e.target.value)}
-            value={category}
+
+          <div
+            style={{
+              position: "relative",
+            }}
           >
-            <option value="psychology">Psychology</option>
-            <option value="motivation">Motivation</option>
-            <option value="fantastic">Fantastic</option>
-            <option value="science">Science</option>
-          </select>
-          <button className="button" onClick={() => {
-            saveData()
-            navigate('/books')
-          }}>
+            <div
+              style={{
+                position: "absolute",
+                left: "6.9pc",
+                top: "22px",
+                color: "white",
+                cursor: "pointer",
+              }}
+            >
+              {" "}
+              <FaChevronDown />
+            </div>
+            <select
+              style={{
+                cursor: "pointer",
+              }}
+              className="select-box"
+              onChange={(e) => setCategory(e.target.value)}
+              value={category}
+            >
+              <option value="psychology">Psychology </option>
+              <option value="motivation">Motivation</option>
+              <option value="fantastic">Fantastic</option>
+              <option value="science">Science</option>
+            </select>
+          </div>
+          <button
+            className="button"
+            onClick={() => {
+              saveData();
+              navigate("/books");
+            }}
+          >
             <span class="transition"></span>
             <span class="gradient"></span>
             <span class="label">SAVE</span>
