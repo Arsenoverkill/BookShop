@@ -174,7 +174,7 @@
 }
 
 .btn:hover::before {
-  transform: skewX(30deg) translate(170%, -50%);
+  transform: skewX(30deg) translate(190%, -50%);
   transition-delay: 0.1s;
 }
 
