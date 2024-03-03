@@ -27,7 +27,7 @@ const Edit = () => {
       setCategory(el.category);
     });
   }
-
+// arsen chort
   function saveData() {
     let newEditObj = {
       name,
